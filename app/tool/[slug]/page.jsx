@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
-// Import TOOLS from the static data file
-import { TOOLS } from '../../../data/tool-config'; 
-// Import client components separately
+// CORRECTED PATH: '../../data/tool-config'
+import { TOOLS } from '../../data/tool-config'; 
+// CORRECTED PATH: '../../components/ToolComponents'
 import { 
   GradeCalculator, 
   PomodoroTimer, 
   StudyPlanner 
-} from '../../../components/ToolComponents';
+} from '../../components/ToolComponents';
 
-// Map slugs to components (which are now all client components)
+// Map slugs to components (which are all client components)
 const ToolComponentMap = {
   'grade-calculator': GradeCalculator,
   'pomodoro-timer': PomodoroTimer,
