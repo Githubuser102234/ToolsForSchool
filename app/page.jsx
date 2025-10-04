@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { LayoutDashboard, Zap } from 'lucide-react';
-// Import TOOLS from the dedicated static data file
-import { TOOLS } from '../../data/tool-config'; 
+// CORRECTED PATH: '../data/tool-config' (Up one level to project root, then into data/)
+import { TOOLS } from '../data/tool-config'; 
 
 export default function ToolListPage() {
   return (
@@ -26,7 +26,6 @@ export default function ToolListPage() {
             const hoverRing = `hover:ring-4 hover:ring-${tool.color}-100`;
 
             return (
-              // Link component is a safe way to navigate in a Next.js App Router Server Component
               <Link key={tool.slug} href={`/tool/${tool.slug}`} passHref className="group">
                 <div
                   className={`p-6 rounded-xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-[1.02] ${bgColor} ${hoverRing} border border-gray-100`}
