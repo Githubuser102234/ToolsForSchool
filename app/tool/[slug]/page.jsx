@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
-// CORRECTED PATH: '../../data/tool-config'
-import { TOOLS } from '../../data/tool-config'; 
-// CORRECTED PATH: '../../components/ToolComponents'
+// Import TOOLS from the static data file
+import { TOOLS } from '../../../data/tool-config'; 
+// Import client components separately
 import { 
   GradeCalculator, 
   PomodoroTimer, 
-  StudyPlanner 
+  StudyPlanner, 
+  GpaConverter, // NEW IMPORT
+  ReadingTimeEstimator // NEW IMPORT
 } from '../../components/ToolComponents';
 
 // Map slugs to components (which are all client components)
@@ -14,6 +16,8 @@ const ToolComponentMap = {
   'grade-calculator': GradeCalculator,
   'pomodoro-timer': PomodoroTimer,
   'study-planner': StudyPlanner,
+  'gpa-converter': GpaConverter, // NEW MAPPING
+  'reading-time-estimator': ReadingTimeEstimator, // NEW MAPPING
 };
 
 export default function ToolDetailPage({ params }) {
